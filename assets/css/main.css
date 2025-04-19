@@ -1,0 +1,59 @@
+/* Base Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #1a202c;
+}
+
+/* Header Effects */
+.transparent-header {
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.3s ease;
+}
+.opaque-header {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Hero Hover Effect */
+.hero-hover-content {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.hero-container:hover .hero-hover-content {
+  opacity: 1;
+}
+
+/* Carousels */
+.listing-carousel, .testimonial-carousel {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.listing-slide, .testimonial-slide {
+  scroll-snap-align: start;
+}
+
+/* Gallery */
+.gallery-main {
+  height: 500px;
+}
+.gallery-thumbs {
+  height: 100px;
+}
+
+/* Property Features */
+.property-feature {
+  transition: all 0.3s ease;
+}
+.property-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Form Elements */
+.form-input {
+  transition: border-color 0.3s ease;
+}
+.form-input:focus {
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mississauga Real Estate | Home</title>
+    <meta name="description" content="Premier real estate services in Mississauga">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .transparent-header {
+            background-color: rgba(255, 255, 255, 0);
+            transition: background-color 0.3s ease;
+        }
+        .opaque-header {
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        .hero-hover-content {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .hero-container:hover .hero-hover-content {
+            opacity: 1;
+        }
+        .testimonial-carousel, .listing-carousel {
+            scroll-snap-type: x mandatory;
+        }
+        .testimonial-slide, .listing-slide {
+            scroll-snap-align: start;
+        }
+    </style>
+</head>
+<body class="font-['Montserrat'] text-gray-800">
+    <!-- Header -->
+    <header id="mainHeader" class="fixed w-full z-50 transparent-header py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="text-2xl font-bold">REALTY<span class="text-blue-600">MISSISSAUGA</span></div>
+            <nav>
+                <ul class="flex space-x-8">
+                    <li><a href="#" class="hover:text-blue-600 transition">Home</a></li>
+                    <li><a href="#" class="hover:text-blue-600 transition">About Us</a></li>
+                    <li><a href="#" class="hover:text-blue-600 transition">Listings</a></li>
+                    <li><a href="#" class="hover:text-blue-600 transition">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen">
+        <div class="hero-container h-full w-full">
+            <img src="https://picsum.photos/1920/1080?random=1" alt="Mississauga neighborhood" class="w-full h-full object-cover">
+            <div class="hero-hover-content absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-medium transition">
+                    See All Listings
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row">
+            <div class="md:w-2/3 pr-0 md:pr-12 mb-8 md:mb-0">
+                <h2 class="text-3xl font-bold mb-6">About Our Real Estate Services</h2>
+                <p class="mb-4">With over 15 years of experience in the Mississauga real estate market, we've helped hundreds of families find their dream homes in this vibrant community.</p>
+                <p class="mb-4">Our team specializes in the suburban neighborhoods that make Mississauga such a desirable place to live, particularly the classic 2-story detached homes that offer the perfect blend of space and comfort.</p>
+                <p>We take pride in our personalized approach, ensuring each client receives the attention and expertise they deserve throughout their home buying or selling journey.</p>
+            </div>
+            <div class="md:w-1/3">
+                <img src="https://picsum.photos/600/800?random=2" alt="Agent profile" class="w-full h-auto rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Listings Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Featured Listings</h2>
+            <div class="listing-carousel flex overflow-x-auto pb-8 space-x-6">
+                <!-- Listing Slides -->
+                <div class="listing-slide flex-shrink-0 w-80 bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://picsum.photos/600/400?random=3" alt="Listing 1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl mb-2">123 Maple Street</h3>
+                        <div class="flex space-x-4 mb-3">
+                            <span class="text-gray-600"><i class="fas fa-bed mr-1"></i> 4 Beds</span>
+                            <span class="text-gray-600"><i class="fas fa-bath mr-1"></i> 2 Baths</span>
+                            <span class="text-gray-600"><i class="fas fa-ruler-combined mr-1"></i> 2,200 sqft</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">Beautiful 2-story detached home in prime Mississauga location...</p>
+                        <a href="#" class="text-blue-600 font-medium">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- More listing slides would go here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Client Testimonials</h2>
+            <div class="testimonial-carousel flex overflow-x-auto pb-8 space-x-6">
+                <!-- Testimonial Slides -->
+                <div class="testimonial-slide flex-shrink-0 w-80 bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="https://picsum.photos/100/100?random=4" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-600 text-sm">Mississauga Homeowner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"The team made our home buying experience seamless. Their knowledge of the Mississauga market is unmatched!"</p>
+                </div>
+                
+                <!-- More testimonial slides would go here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold mb-12 text-center">Get In Touch</h2>
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="md:col-span-2">
+                    <label class="block mb-2 font-medium">I'm interested in:</label>
+                    <div class="flex space-x-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="interest" checked class="form-radio text-blue-600">
+                            <span class="ml-2">Buying</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="interest" class="form-radio text-blue-600">
+                            <span class="ml-2">Selling</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block mb-2 font-medium">Budget Range</label>
+                    <select class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        <option>Select Budget</option>
+                        <option>$500,000 - $750,000</option>
+                        <option>$750,000 - $1,000,000</option>
+                        <option>$1,000,000+</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label class="block mb-2 font-medium">Timeline</label>
+                    <select class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        <option>Select Timeline</option>
+                        <option>0-3 months</option>
+                        <option>3-6 months</option>
+                        <option>6-12 months</option>
+                    </select>
+                </div>
+                
+                <div class="md:col-span-2">
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-medium transition">
+                        Submit Inquiry
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">REALTY<span class="text-blue-400">MISSISSAUGA</span></h3>
+                    <p class="text-gray-400">Your trusted partner in Mississauga real estate.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Listings</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone-alt mr-2"></i> (905) 555-1234</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@realtymississauga.com</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> 123 Real Estate Ave, Mississauga</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2023 Realty Mississauga. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) {
+                header.classList.remove('transparent-header');
+                header.classList.add('opaque-header', 'shadow-md');
+            } else {
+                header.classList.add('transparent-header');
+                header.classList.remove('opaque-header', 'shadow-md');
+            }
+        });
+
+        // Listing data - this would be fetched from a CMS in production
+        const listings = [
+            {
+                id: 1,
+                title: "123 Maple Street",
+                beds: 4,
+                baths: 2,
+                sqft: 2200,
+                price: "$899,000",
+                description: "Beautiful 2-story detached home in prime Mississauga location featuring an open concept layout, modern kitchen, and spacious backyard.",
+                images: [
+                    "https://picsum.photos/800/600?random=5",
+                    "https://picsum.photos/800/600?random=6",
+                    "https://picsum.photos/800/600?random=7"
+                ]
+            },
+            // More listings would be added here
+        ];
+
+        // Function to generate listing template
+        function generateListingTemplate(listing) {
+            return `
+                <div class="max-w-6xl mx-auto px-6 py-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <div>
+                            <div class="relative h-96 mb-4 rounded-lg overflow-hidden">
+                                <img src="${listing.images[0]}" alt="${listing.title}" class="w-full h-full object-cover">
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 mb-6">
+                                ${listing.images.slice(1).map(img => `
+                                    <div class="h-32 rounded overflow-hidden">
+                                        <img src="${img}" alt="${listing.title}" class="w-full h-full object-cover">
+                                    </div>
+                                `).join('')}
+                            </div>
+                            
+                            <h1 class="text-3xl font-bold mb-2">${listing.title}</h1>
+                            <div class="flex space-x-6 mb-4">
+                                <span class="text-gray-600"><i class="fas fa-bed mr-1"></i> ${listing.beds} Beds</span>
+                                <span class="text-gray-600"><i class="fas fa-bath mr-1"></i> ${listing.baths} Baths</span>
+                                <span class="text-gray-600"><i class="fas fa-ruler-combined mr-1"></i> ${listing.sqft} sqft</span>
+                            </div>
+                            <h2 class="text-2xl font-bold text-blue-600 mb-4">${listing.price}</h2>
+                            <p class="text-gray-700 mb-6">${listing.description}</p>
+                        </div>
+                        
+                        <div>
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                                <h3 class="text-xl font-bold mb-4">Schedule a Viewing</h3>
+                                <form>
+                                    <div class="mb-4">
+                                        <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border rounded-lg">
+                                    </div>
+                                    <div class="mb-4">
+                                        <input type="email" placeholder="Email Address" class="w-full px-4 py-2 border rounded-lg">
+                                    </div>
+                                    <div class="mb-4">
+                                        <input type="tel" placeholder="Phone Number" class="w-full px-4 py-2 border rounded-lg">
+                                    </div>
+                                    <div class="mb-4">
+                                        <textarea placeholder="Message" rows="4" class="w-full px-4 py-2 border rounded-lg"></textarea>
+                                    </div>
+                                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-medium transition">
+                                        Request Viewing
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Initialize carousels
+        document.addEventListener('DOMContentLoaded', function() {
+            // This is where you would initialize your carousel/slider libraries
+            // For production, you might use something like Swiper.js or Glide.js
+        });
+    </script>
+</body>
+</html>
