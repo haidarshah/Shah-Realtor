@@ -1,0 +1,24 @@
+
+{
+  "hero": {
+    "image": "/images/hero.jpg",
+    "ctaText": "Explore Our Listings",
+    "ctaLink": "/listings.html"
+  },
+  "about": {
+    "image": "/images/about.jpg",
+    "text": "We are a trusted real estate firm offering premium properties across the city. Our mission is to help you find your dream home."
+  },
+  "featuredListings": [
+    {
+      "title": "Luxury Villa in the Hills",
+      "image": "/images/listing1.jpg",
+      "slug": "luxury-villa-hills"
+    },
+    {
+      "title": "Modern Apartment Downtown",
+      "image": "/images/listing2.jpg",
+      "slug": "modern-apartment-downtown"
+    }
+  ]
+}

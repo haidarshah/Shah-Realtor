@@ -1,0 +1,16 @@
+{
+  "title": "Welcome to Our Real Estate Site",
+  "description": "Find your dream home today!",
+  "featured": [
+    {
+      "title": "Cozy Bungalow",
+      "description": "A beautiful bungalow in the suburbs.",
+      "image": "https://via.placeholder.com/300x200"
+    },
+    {
+      "title": "Modern Apartment",
+      "description": "Downtown living with all the amenities.",
+      "image": "https://via.placeholder.com/300x200"
+    }
+  ]
+}
