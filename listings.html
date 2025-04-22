@@ -3,151 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mississauga Listings | Realty Mississauga</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Listings | Shah Realtor</title>
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Same styles as index.html */
-        .transparent-header { background-color: rgba(255, 255, 255, 0); transition: background-color 0.3s ease; }
-        .opaque-header { background-color: rgba(255, 255, 255, 0.95); }
-        .listing-carousel { scroll-snap-type: x mandatory; }
-        .listing-slide { scroll-snap-align: start; }
-    </style>
 </head>
 <body class="font-['Montserrat'] text-gray-800">
-    <!-- Header (same as index.html) -->
-    <header id="mainHeader" class="fixed w-full z-50 transparent-header py-4">
+
+    <header class="py-4 bg-gray-900 text-white">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <div class="text-2xl font-bold">REALTY<span class="text-blue-600">MISSISSAUGA</span></div>
+            <div class="text-2xl font-bold">SHAH<span class="text-blue-600">REALTOR</span></div>
             <nav>
                 <ul class="flex space-x-8">
                     <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
-                    <li><a href="#" class="hover:text-blue-600 transition">About Us</a></li>
+                    <li><a href="about.html" class="hover:text-blue-600 transition">About Us</a></li>
                     <li><a href="listings.html" class="hover:text-blue-600 transition">Listings</a></li>
-                    <li><a href="#" class="hover:text-blue-600 transition">Contact Us</a></li>
+                    <li><a href="contact.html" class="hover:text-blue-600 transition">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Main Listings Grid -->
-    <main class="pt-24 pb-12">
+    <main class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h1 class="text-4xl font-bold mb-8">Current Mississauga Listings</h1>
-            
-            <!-- Filter Controls -->
-            <div class="bg-gray-50 p-6 rounded-lg mb-12">
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                    <div>
-                        <label class="block mb-2 font-medium">Price Range</label>
-                        <select class="w-full px-4 py-2 border rounded-lg">
-                            <option>Any Price</option>
-                            <option>$500,000 - $750,000</option>
-                            <option>$750,000 - $1,000,000</option>
-                            <option>$1,000,000+</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block mb-2 font-medium">Bedrooms</label>
-                        <select class="w-full px-4 py-2 border rounded-lg">
-                            <option>Any</option>
-                            <option>3+</option>
-                            <option>4+</option>
-                            <option>5+</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block mb-2 font-medium">Property Type</label>
-                        <select class="w-full px-4 py-2 border rounded-lg">
-                            <option>All Types</option>
-                            <option>Detached</option>
-                            <option>Semi-Detached</option>
-                            <option>Condo</option>
-                        </select>
-                    </div>
-                    <div class="flex items-end">
-                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg">
-                            Filter Listings
-                        </button>
-                    </div>
+            <h2 class="text-3xl font-bold text-center mb-12">Our Listings</h2>
+
+            <!-- Listing 1 -->
+            <div class="listing-item mb-6">
+                <img src="assets/images/listing1.jpg" alt="Luxury Condo" class="w-full h-48 object-cover mb-4">
+                <h3 class="text-2xl font-semibold">Luxury Condo in Toronto</h3>
+                <div class="flex space-x-4 mb-3">
+                    <span class="text-gray-600"><i class="fas fa-bed mr-1"></i> 2 Beds</span>
+                    <span class="text-gray-600"><i class="fas fa-bath mr-1"></i> 2 Baths</span>
+                    <span class="text-gray-600"><i class="fas fa-ruler-combined mr-1"></i> 1200 sqft</span>
                 </div>
+                <p class="text-gray-700 mb-4">A beautiful 2-bedroom condo with stunning views.</p>
+                <a href="listings/luxury-condo.html" class="text-blue-600 font-medium">View Details</a>
             </div>
 
-            <!-- Listings Grid -->
-            <div id="listingsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Listings will be dynamically inserted here -->
+            <!-- Listing 2 -->
+            <div class="listing-item">
+                <img src="assets/images/listing2.jpg" alt="Cozy Family Home" class="w-full h-48 object-cover mb-4">
+                <h3 class="text-2xl font-semibold">Cozy Family Home</h3>
+                <div class="flex space-x-4 mb-3">
+                    <span class="text-gray-600"><i class="fas fa-bed mr-1"></i> 3 Beds</span>
+                    <span class="text-gray-600"><i class="fas fa-bath mr-1"></i> 2 Baths</span>
+                    <span class="text-gray-600"><i class="fas fa-ruler-combined mr-1"></i> 2000 sqft</span>
+                </div>
+                <p class="text-gray-700 mb-4">Perfect for a growing family, with spacious rooms.</p>
+                <a href="listings/cozy-family-home.html" class="text-blue-600 font-medium">View Details</a>
             </div>
         </div>
     </main>
 
-    <!-- Footer (same as index.html) -->
     <footer class="bg-gray-900 text-white py-12">
-        <!-- ... same footer content ... -->
+        <!-- Footer content (same as before) -->
     </footer>
-
-    <script>
-        // Listing data - would come from CMS in production
-        const listings = [
-            {
-                id: 1,
-                title: "123 Maple Street",
-                address: "Mississauga, ON L5M 1A1",
-                beds: 4,
-                baths: 2,
-                sqft: 2200,
-                price: "$899,000",
-                featuredImage: "https://picsum.photos/600/400?random=3",
-                description: "Beautiful 2-story detached home in prime Mississauga location..."
-            },
-            {
-                id: 2,
-                title: "456 Oak Avenue",
-                address: "Mississauga, ON L5B 2C2",
-                beds: 3,
-                baths: 2.5,
-                sqft: 1800,
-                price: "$799,000",
-                featuredImage: "https://picsum.photos/600/400?random=8",
-                description: "Charming 2-story with finished basement and large backyard..."
-            },
-            // Add more listings as needed
-        ];
-
-        // Generate listing cards
-        function generateListingCard(listing) {
-            return `
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="${listing.featuredImage}" alt="${listing.title}" class="w-full h-full object-cover">
-                        <div class="absolute bottom-0 left-0 bg-blue-600 text-white px-3 py-1">
-                            ${listing.price}
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">${listing.title}</h3>
-                        <p class="text-gray-600 mb-3">${listing.address}</p>
-                        <div class="flex space-x-4 mb-4">
-                            <span class="text-gray-600"><i class="fas fa-bed mr-1"></i> ${listing.beds} Beds</span>
-                            <span class="text-gray-600"><i class="fas fa-bath mr-1"></i> ${listing.baths} Baths</span>
-                            <span class="text-gray-600"><i class="fas fa-ruler-combined mr-1"></i> ${listing.sqft} sqft</span>
-                        </div>
-                        <p class="text-gray-700 mb-4 line-clamp-2">${listing.description}</p>
-                        <a href="listing-detail.html?id=${listing.id}" class="block text-center bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition">
-                            View Details
-                        </a>
-                    </div>
-                </div>
-            `;
-        }
-
-        // Render listings on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            const container = document.getElementById('listingsContainer');
-            listings.forEach(listing => {
-                container.innerHTML += generateListingCard(listing);
-            });
-        });
-    </script>
 </body>
 </html>
