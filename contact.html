@@ -21,10 +21,10 @@
       <div class="text-2xl font-bold">SHAH<span class="text-blue-600">REALTOR</span></div>
       <nav>
         <ul class="flex space-x-8">
-          <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
-          <li><a href="about.html" class="hover:text-blue-600 transition">About Us</a></li>
-          <li><a href="listings.html" class="hover:text-blue-600 transition">Listings</a></li>
-          <li><a href="contact.html" class="text-blue-600 font-semibold">Contact Us</a></li>
+          <li><a href="/index.html" class="hover:text-blue-600 transition">Home</a></li>
+          <li><a href="/about.html" class="hover:text-blue-600 transition">About Us</a></li>
+          <li><a href="/listings.html" class="text-blue-600 font-semibold">Listings</a></li>
+          <li><a href="/contact.html" class="hover:text-blue-600 transition">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -32,13 +32,6 @@
 
   <!-- MAIN CONTENT -->
   <main class="pt-32 container mx-auto px-6">
-
-    <!-- Banner -->
-    <section class="relative h-64 bg-cover bg-center rounded-2xl shadow mb-12" style="background-image: url('assets/images/contact-banner.jpg');">
-      <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center rounded-2xl">
-        <h1 class="text-white text-4xl font-bold">Get in Touch</h1>
-      </div>
-    </section>
 
     <!-- Form & Info -->
     <section class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
@@ -130,5 +123,19 @@
       }
     });
   </script>
+<!-- Contact Form Section at Bottom -->
+<section class="mt-20 bg-gray-100 py-12">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+    <p class="text-lg mb-8">Have questions or want to book a viewing? Fill out the form below, and we'll get back to you as soon as possible.</p>
+    
+    <form class="space-y-6 max-w-lg mx-auto">
+      <input type="text" placeholder="Full Name" class="w-full p-3 border rounded-lg">
+      <input type="email" placeholder="Email Address" class="w-full p-3 border rounded-lg">
+      <textarea placeholder="Message" rows="4" class="w-full p-3 border rounded-lg"></textarea>
+      <button type="submit" class="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition">Send Message</button>
+    </form>
+  </div>
+</section>
 </body>
 </html>
