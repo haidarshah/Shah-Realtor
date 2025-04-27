@@ -3,20 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shah Realtor | Find Your Dream Home</title>
-  <meta name="description" content="Premier real estate services in the GTA">
+  <title>Shah Realtor - Home</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    .transparent-header { background-color: rgba(255, 255, 255, 0); transition: background-color 0.3s ease; }
-    .opaque-header { background-color: rgba(255, 255, 255, 0.95); }
+    .transparent-header {
+      background-color: rgba(255, 255, 255, 0);
+      transition: background-color 0.3s ease;
+    }
+    .opaque-header {
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+    .hero-image {
+      height: 70vh;
+      object-fit: cover;
+    }
+    .about-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
   </style>
 </head>
-
 <body class="font-['Montserrat'] text-gray-800 bg-gray-50">
 
-  <!-- Header -->
+  <!-- HEADER -->
   <header id="mainHeader" class="fixed w-full z-50 transparent-header py-4">
     <div class="container mx-auto px-6 flex justify-between items-center">
       <div class="text-2xl font-bold">SHAH<span class="text-blue-600">REALTOR</span></div>
@@ -25,85 +41,91 @@
           <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
           <li><a href="about.html" class="hover:text-blue-600 transition">About Us</a></li>
           <li><a href="listings.html" class="hover:text-blue-600 transition">Listings</a></li>
-          <li><a href="contact.html" class="hover:text-blue-600 transition">Contact Us</a></li>
+          <li><a href="contact.html" class="hover:text-blue-600 transition">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Main Content -->
+  <!-- HERO SECTION -->
+  <section class="relative hero-image">
+    <img src="assets/images/hero.jpg" alt="Hero Image" class="w-full hero-image">
+    <div class="absolute inset-0 bg-black opacity-40"></div>
+    <div class="absolute inset-0 flex justify-center items-center text-white">
+      <h1 class="text-4xl font-bold">Welcome to Shah Realtor</h1>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
   <main class="pt-32 container mx-auto px-6">
 
-    <!-- Hero Section -->
-    <section class="text-center">
-      <h1 class="text-5xl font-bold mb-6">Find Your Dream Home</h1>
-      <p class="text-lg text-gray-600 mb-10">Premier real estate services across the GTA, Mississauga, Toronto, and beyond.</p>
-      <img src="assets/images/hero.jpg" alt="Dream Home" class="w-full h-96 object-cover rounded-2xl shadow">
+    <!-- About Us Section -->
+    <section class="mt-20">
+      <h2 class="text-3xl font-bold mb-6">About Us</h2>
+      <div class="flex items-center space-x-8">
+        <div class="w-1/2">
+          <img src="assets/images/about-us.jpg" alt="About Us Image" class="about-image">
+        </div>
+        <div class="w-1/2">
+          <p class="text-gray-700 leading-relaxed">
+            Shah Realtor is a trusted real estate agency offering premium properties in the area. We specialize in helping buyers find their perfect homes and assisting sellers with getting the best deals. Our team is dedicated to providing exceptional customer service and ensuring a smooth real estate experience from start to finish.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- Featured Listings Section -->
-<section class="mt-20">
-  <h2 class="text-3xl font-semibold mb-8">Featured Listings</h2>
+    <!-- Contact Form Section -->
+    <section class="mt-20">
+      <h2 class="text-2xl font-bold mb-6">Get in Touch</h2>
+      <form class="space-y-4 max-w-lg">
+        <input type="text" placeholder="Full Name" class="w-full p-3 border rounded">
+        <input type="email" placeholder="Email Address" class="w-full p-3 border rounded">
+        <textarea placeholder="Message" rows="4" class="w-full p-3 border rounded"></textarea>
+        <button type="submit" class="bg-gray-800 text-white py-3 px-6 rounded hover:bg-gray-700 transition">Send Message</button>
+      </form>
+    </section>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-    <!-- Listing Card 1 -->
-    <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4">
-      <img src="assets/images/hassard.jpg" alt="4 Hassard-Short Lane" class="w-full h-48 object-cover rounded mb-4">
-      <h3 class="text-xl font-semibold mb-2">$1,356,999</h3>
-      <p class="text-gray-600 mb-2">4 Hassard-Short Lane, Ajax ON</p>
-      <a href="4-hassard-short-lane.html" class="text-blue-600 hover:underline">View Listing</a>
-    </div>
-
-    <!-- Listing Card 2 -->
-    <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4">
-      <img src="assets/images/8-storey-drive-halton-hills (26).jpg" alt="8 Storey Drive" class="w-full h-48 object-cover rounded mb-4">
-      <h3 class="text-xl font-semibold mb-2">$980,000</h3>
-      <p class="text-gray-600 mb-2">8 Storey Drive, Acton ON</p>
-      <a href="8-storey-drive.html" class="text-blue-600 hover:underline">View Listing</a>
-    </div>
-  </div>
-</section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-20 py-12">
+      <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">SHAH<span class="text-blue-400">REALTOR</span></h3>
+          <p class="text-gray-400">Your trusted partner in Mississauga real estate.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+            <li><a href="listings.html" class="text-gray-400 hover:text-white">Listings</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Contact Info</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><i class="fas fa-phone-alt mr-2"></i> (905) 555-1234</li>
+            <li><i class="fas fa-envelope mr-2"></i> hussainshahtq@gmail.com</li>
+            <li><i class="fas fa-map-marker-alt mr-2"></i> 480 Eglinton Ave W #30, Mississauga, ON L5R 0G2</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+        <p>&copy; 2025 Shah Realtor. All rights reserved.</p>
+      </div>
+    </footer>
 
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white mt-20 py-12">
-    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-      <div>
-        <h3 class="text-xl font-bold mb-4">SHAH<span class="text-blue-400">REALTOR</span></h3>
-        <p class="text-gray-400">Your trusted partner in Mississauga real estate.</p>
-      </div>
-      <div>
-        <h4 class="font-bold mb-4">Quick Links</h4>
-        <ul class="space-y-2">
-          <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
-          <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
-          <li><a href="listings.html" class="text-gray-400 hover:text-white transition">Listings</a></li>
-          <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-bold mb-4">Legal</h4>
-        <ul class="space-y-2">
-          <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
-          <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-bold mb-4">Contact Info</h4>
-        <ul class="space-y-2 text-gray-400">
-          <li><i class="fas fa-phone-alt mr-2"></i> (905) 555-1234</li>
-          <li><i class="fas fa-envelope mr-2"></i> hussainshahtq@gmail.com</li>
-          <li><i class="fas fa-map-marker-alt mr-2"></i> 480 Eglinton Ave W #30, Mississauga, ON L5R 0G2</li>
-        </ul>
-      </div>
-    </div>
-    <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-      <p>&copy; 2025 Shah Realtor. All rights reserved.</p>
-    </div>
-  </footer>
-
   <script>
+    // Header background change on scroll
     window.addEventListener('scroll', function () {
       const header = document.getElementById('mainHeader');
       if (window.scrollY > 50) {
@@ -115,5 +137,6 @@
       }
     });
   </script>
+
 </body>
 </html>
