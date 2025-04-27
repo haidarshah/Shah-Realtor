@@ -3,37 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listing Detail | Realty Mississauga</title>
+    <title>Shah Realtor | Home</title>
+    <meta name="description" content="Premier real estate services in the GTA">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .gallery-main {
-            height: 500px;
+        .transparent-header {
+            background-color: rgba(255, 255, 255, 0);
+            transition: background-color 0.3s ease;
         }
-        .gallery-thumbs {
-            height: 100px;
+        .opaque-header {
+            background-color: rgba(255, 255, 255, 0.95);
         }
-        .property-feature {
-            transition: all 0.3s ease;
+        .hero-hover-content {
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
-        .property-feature:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        .hero-container:hover .hero-hover-content {
+            opacity: 1;
         }
     </style>
 </head>
 <body class="font-['Montserrat'] text-gray-800">
-    <!-- Header (same as other pages) -->
     <header id="mainHeader" class="fixed w-full z-50 transparent-header py-4">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <div class="text-2xl font-bold">REALTY<span class="text-blue-600">MISSISSAUGA</span></div>
+            <div class="text-2xl font-bold">SHAH<span class="text-blue-600">REALTOR</span></div>
             <nav>
                 <ul class="flex space-x-8">
                     <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
-                    <li><a href="#" class="hover:text-blue-600 transition">About Us</a></li>
+                    <li><a href="about.html" class="hover:text-blue-600 transition">About Us</a></li>
                     <li><a href="listings.html" class="hover:text-blue-600 transition">Listings</a></li>
-                    <li><a href="#" class="hover:text-blue-600 transition">Contact Us</a></li>
+                    <li><a href="contact.html" class="hover:text-blue-600 transition">Contact Us</a></li>
                 </ul>
             </nav>
         </div>

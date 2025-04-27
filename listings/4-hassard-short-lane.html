@@ -1,1 +1,249 @@
-<!-- listings/listing1.html content goes here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shah Realtor | Home</title>
+    <meta name="description" content="Premier real estate services in the GTA">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .transparent-header {
+            background-color: rgba(255, 255, 255, 0);
+            transition: background-color 0.3s ease;
+        }
+        .opaque-header {
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        .hero-hover-content {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .hero-container:hover .hero-hover-content {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="font-['Montserrat'] text-gray-800">
+    <header id="mainHeader" class="fixed w-full z-50 transparent-header py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="text-2xl font-bold">SHAH<span class="text-blue-600">REALTOR</span></div>
+            <nav>
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-blue-600 transition">About Us</a></li>
+                    <li><a href="listings.html" class="hover:text-blue-600 transition">Listings</a></li>
+                    <li><a href="contact.html" class="hover:text-blue-600 transition">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Listing Detail Content -->
+    <main class="pt-24 pb-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-2">
+                    <div class="gallery-main mb-4 rounded-lg overflow-hidden">
+                        <img id="mainImage" src="" alt="Main property image" class="w-full h-full object-cover">
+                    </div>
+                    <div class="grid grid-cols-4 gap-2 mb-8">
+                        <!-- Thumbnails will be inserted here -->
+                    </div>
+                    
+                    <h1 id="listingTitle" class="text-3xl font-bold mb-2"></h1>
+                    <p id="listingAddress" class="text-gray-600 mb-6"></p>
+                    
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="property-feature bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                            <div class="text-blue-600 mb-2"><i class="fas fa-bed text-2xl"></i></div>
+                            <h3 class="font-bold">Bedrooms</h3>
+                            <p id="listingBeds" class="text-gray-600"></p>
+                        </div>
+                        <div class="property-feature bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                            <div class="text-blue-600 mb-2"><i class="fas fa-bath text-2xl"></i></div>
+                            <h3 class="font-bold">Bathrooms</h3>
+                            <p id="listingBaths" class="text-gray-600"></p>
+                        </div>
+                        <div class="property-feature bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                            <div class="text-blue-600 mb-2"><i class="fas fa-ruler-combined text-2xl"></i></div>
+                            <h3 class="font-bold">Square Feet</h3>
+                            <p id="listingSqft" class="text-gray-600"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm mb-8">
+                        <h2 class="text-2xl font-bold mb-4">Property Description</h2>
+                        <p id="listingDescription" class="text-gray-700"></p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold mb-4">Property Features</h2>
+                        <ul id="listingFeatures" class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            <!-- Features will be inserted here -->
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm sticky top-24">
+                        <h2 class="text-2xl font-bold mb-4">Schedule a Viewing</h2>
+                        <form>
+                            <div class="mb-4">
+                                <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border rounded-lg">
+                            </div>
+                            <div class="mb-4">
+                                <input type="email" placeholder="Email Address" class="w-full px-4 py-2 border rounded-lg">
+                            </div>
+                            <div class="mb-4">
+                                <input type="tel" placeholder="Phone Number" class="w-full px-4 py-2 border rounded-lg">
+                            </div>
+                            <div class="mb-4">
+                                <textarea placeholder="Message" rows="4" class="w-full px-4 py-2 border rounded-lg"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-medium transition">
+                                Request Viewing
+                            </button>
+                        </form>
+                        
+                        <div class="mt-8">
+                            <h3 class="font-bold mb-2">Price</h3>
+                            <p id="listingPrice" class="text-2xl text-blue-600 font-bold"></p>
+                            <button class="w-full mt-4 bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-medium transition">
+                                Request Full Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Sample listing data - would come from CMS in production
+        const listing = {
+            id: 1,
+            title: "4 Hassard-Short Lane",
+            address: "Ajax, ON L1S0C4",
+            beds: 4,
+            baths: 2,
+            sqft: 2200,
+            price: "$899,000",
+            description: "Beautiful, detached fully vacant 2991 Sqft home on the QUIET STREET with finished legal basement unit. Double Door Entry, Double garage, side SEPARATE ENTRANCE Stone and Bricks. 5 Spacious Bedrooms with open concept living/dining rooms and kitchen combo. Secondary Kitchen on second floor. Convenient Location, Minutes To Highway 401, Ajax Hospital, Schools And All Amenities. (40161283)",
+            images: [
+                "https://picsum.photos/800/600?random=5",
+                "https://picsum.photos/800/600?random=6",
+                "https://picsum.photos/800/600?random=7",
+                "https://picsum.photos/800/600?random=8"
+            ],
+            features: [
+                "Detached 2-story home",
+                "Finished basement",
+                "Double car garage",
+                "Hardwood floors",
+                "Modern kitchen with quartz",
+                "Finished basement",
+                "Large backyard",
+                "Close to schools",
+                "Family neighborhood"
+            ]
+        };
+
+        // Render listing on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const listingId = urlParams.get('id');
+
+            // In production, you would fetch the listing data from CMS here
+            // For now we'll use the sample data
+            const currentListing = listing;
+
+            // Populate the page
+            document.getElementById('listingTitle').textContent = currentListing.title;
+            document.getElementById('listingAddress').textContent = currentListing.address;
+            document.getElementById('listingBeds').textContent = currentListing.beds + " Bedrooms";
+            document.getElementById('listingBaths').textContent = currentListing.baths + " Bathrooms";
+            document.getElementById('listingSqft').textContent = currentListing.sqft + " sqft";
+            document.getElementById('listingPrice').textContent = currentListing.price;
+            document.getElementById('listingDescription').textContent = currentListing.description;
+
+            // Set main image
+            document.getElementById('mainImage').src = currentListing.images[0];
+            document.getElementById('mainImage').alt = currentListing.title;
+
+            // Create thumbnails
+            const thumbsContainer = document.querySelector('.gallery-thumbs');
+            currentListing.images.forEach((img, index) => {
+                thumbsContainer.innerHTML += `
+                    <div class="cursor-pointer">
+                        <img src="${img}" alt="Thumbnail ${index + 1}" 
+                             class="w-full h-full object-cover rounded"
+                             onclick="document.getElementById('mainImage').src='${img}'">
+                    </div>
+                `;
+            });
+
+            // Add features
+            const featuresContainer = document.getElementById('listingFeatures');
+            currentListing.features.forEach(feature => {
+                featuresContainer.innerHTML += `
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i> ${feature}
+                    </li>
+                `;
+            });
+        });
+    </script>
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-xl font-bold mb-4">SHAH<span class="text-blue-400">REALTOR</span></h3>
+        <p class="text-gray-400">Your trusted partner in Mississauga real estate.</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+          <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+          <li><a href="listings.html" class="text-gray-400 hover:text-white transition">Listings</a></li>
+          <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Legal</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Contact Info</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><i class="fas fa-phone-alt mr-2"></i> (905) 555-1234</li>
+          <li><i class="fas fa-envelope mr-2"></i> hussainshahtq@gmail.com</li>
+          <li><i class="fas fa-map-marker-alt mr-2"></i> 480 Eglinton Ave W #30, Mississauga, ON L5R 0G2 </li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+      <p>&copy; 2025 Shah Realtor. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    window.addEventListener('scroll', function () {
+      const header = document.getElementById('mainHeader');
+      if (window.scrollY > 50) {
+        header.classList.remove('transparent-header');
+        header.classList.add('opaque-header');
+      } else {
+        header.classList.remove('opaque-header');
+        header.classList.add('transparent-header');
+      }
+    });
+  </script>
+</body>
+</html>
