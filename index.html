@@ -75,9 +75,10 @@
             <div class="listing-carousel flex overflow-x-auto pb-8 space-x-6">
                 <!-- Listing 1 -->
                 <div class="listing-slide flex-shrink-0 w-80 bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="assets/images/listing1.jpg" alt="Luxury Condo" class="w-full h-48 object-cover">
+                    <img src="assets/images/hassard.jpg" alt="hassard" class="w-full h-48 object-cover">
                     <div class="p-4">
-                        <h3 class="font-bold text-xl mb-2">4 Hassard-Short Lane, Ajax ON</h3>
+                        <h3 class="font-bold text-xl mb-2">4 Hassard-Short Lane
+			Ajax ON</h3>
                         <div class="flex space-x-4 mb-3">
                             <span class="text-gray-600"><i class="fas fa-bed mr-1"></i> 4+2 Beds</span>
                             <span class="text-gray-600"><i class="fas fa-bath mr-1"></i> 6 Baths</span>
@@ -141,5 +142,19 @@
       <p>&copy; 2025 Shah Realtor. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const header = document.getElementById('mainHeader');
+      if (window.scrollY > 50) {
+        header.classList.remove('transparent-header');
+        header.classList.add('opaque-header');
+      } else {
+        header.classList.remove('opaque-header');
+        header.classList.add('transparent-header');
+      }
+    });
+  </script>
+
 </body>
 </html>
