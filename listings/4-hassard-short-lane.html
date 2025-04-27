@@ -3,10 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shah Realtor | 4 Hassard-Short Lane</title>
+  <title>4 Hassard-Short Lane | Shah Realtor</title>
+  <meta name="description" content="4 Hassard-Short Lane - Spacious home for sale in Ajax. View photos, details and book a showing.">
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fancybox (for lightbox gallery) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+  <!-- FontAwesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
     .transparent-header {
       background-color: rgba(255, 255, 255, 0);
@@ -15,151 +27,145 @@
     .opaque-header {
       background-color: rgba(255, 255, 255, 0.95);
     }
-    .modal {
-      display: none;
-    }
-    .modal.active {
-      display: flex;
-    }
   </style>
 </head>
 
-<body class="font-['Montserrat'] text-gray-800">
+<body class="font-['Montserrat'] text-gray-800 bg-gray-50">
 
-<header id="mainHeader" class="fixed w-full z-50 transparent-header py-4">
-  <div class="container mx-auto px-6 flex justify-between items-center">
-    <div class="text-2xl font-bold">SHAH<span class="text-blue-600">REALTOR</span></div>
-    <nav>
-      <ul class="flex space-x-8">
-        <li><a href="../index.html" class="hover:text-blue-600 transition">Home</a></li>
-        <li><a href="../about.html" class="hover:text-blue-600 transition">About Us</a></li>
-        <li><a href="../listings.html" class="hover:text-blue-600 transition">Listings</a></li>
-        <li><a href="../contact.html" class="hover:text-blue-600 transition">Contact Us</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <!-- HEADER -->
+  <header id="mainHeader" class="fixed w-full z-50 transparent-header py-4">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <div class="text-2xl font-bold">SHAH<span class="text-blue-600">REALTOR</span></div>
+      <nav>
+        <ul class="flex space-x-8">
+          <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-blue-600 transition">About Us</a></li>
+          <li><a href="listings.html" class="hover:text-blue-600 transition">Listings</a></li>
+          <li><a href="contact.html" class="hover:text-blue-600 transition">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<main class="pt-32 px-6 container mx-auto">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-    <!-- Gallery -->
-    <div>
-      <img id="mainImage" src="../assets/images/hassard.jpg" alt="4 Hassard-Short Lane" class="w-full h-96 object-cover rounded-lg mb-4 cursor-pointer" onclick="openModal(this.src)">
-      
-      <div class="flex space-x-2 overflow-x-auto">
-        <img src="../assets/images/e12055507_13.jpg" class="w-24 h-24 object-cover rounded cursor-pointer" onclick="changeImage(this.src)">
-        <img src="../assets/images/e12055507_22.jpg" class="w-24 h-24 object-cover rounded cursor-pointer" onclick="changeImage(this.src)">
-        <img src="../assets/images/e12055507_24.jpg" class="w-24 h-24 object-cover rounded cursor-pointer" onclick="changeImage(this.src)">
+  <!-- MAIN CONTENT -->
+  <main class="pt-32 container mx-auto px-6">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+      <!-- LEFT: IMAGE GALLERY -->
+      <div>
+        <!-- Main Image -->
+        <a href="../assets/images/hassard.jpg" data-fancybox="gallery">
+          <img src="../assets/images/hassard.jpg" alt="4 Hassard-Short Lane" class="w-full h-96 object-cover rounded-2xl shadow mb-4">
+        </a>
+
+        <!-- Thumbnails -->
+        <div class="flex space-x-3 overflow-x-auto">
+          <a href="../assets/images/e12055507_13.jpg" data-fancybox="gallery">
+            <img src="../assets/images/e12055507_13.jpg" class="w-24 h-24 object-cover rounded-lg border-2 border-transparent hover:border-blue-500 transition">
+          </a>
+          <a href="../assets/images/e12055507_22.jpg" data-fancybox="gallery">
+            <img src="../assets/images/e12055507_22.jpg" class="w-24 h-24 object-cover rounded-lg border-2 border-transparent hover:border-blue-500 transition">
+          </a>
+          <a href="../assets/images/e12055507_24.jpg" data-fancybox="gallery">
+            <img src="../assets/images/e12055507_24.jpg" class="w-24 h-24 object-cover rounded-lg border-2 border-transparent hover:border-blue-500 transition">
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: DETAILS -->
+      <div class="bg-white p-8 rounded-2xl shadow space-y-6">
+        <div>
+          <h1 class="text-4xl font-extrabold text-gray-900 mb-2">$1,200,000</h1>
+          <p class="text-lg text-gray-600">4 Hassard-Short Lane, Ajax ON</p>
+        </div>
+
+        <ul class="space-y-2 text-gray-700">
+          <li><strong>Beds:</strong> 4+2</li>
+          <li><strong>Baths:</strong> 6</li>
+          <li><strong>Size:</strong> 3,000 sqft</li>
+          <li><strong>Lot:</strong> 40 x 100 ft</li>
+          <li><strong>Taxes:</strong> $5,400/year</li>
+        </ul>
+
+        <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition mb-8">
+          Request Viewing
+        </button>
       </div>
     </div>
 
-    <!-- Sidebar -->
-    <div class="space-y-4">
-      <h1 class="text-3xl font-bold">$1,200,000</h1>
-      <p class="text-lg text-gray-600">4 Hassard-Short Lane, Ajax ON</p>
+    <!-- DESCRIPTION -->
+    <section class="mt-20">
+      <h2 class="text-2xl font-bold mb-4">Property Description</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Welcome to this beautiful detached home in Ajax. Featuring spacious living areas, a modern kitchen,
+        upgraded bathrooms, and a professionally finished basement. Perfect for growing families, close to top-rated schools, parks, and shopping.
+      </p>
+    </section>
 
-      <ul class="space-y-2">
-        <li><strong>Beds:</strong> 4+2</li>
-        <li><strong>Baths:</strong> 6</li>
-        <li><strong>Size:</strong> 3,000 sqft</li>
-        <li><strong>Lot:</strong> 40 x 100 ft</li>
-        <li><strong>Taxes:</strong> $5,400/yr</li>
-      </ul>
+    <!-- CONTACT FORM -->
+    <section class="mt-20">
+      <h2 class="text-2xl font-bold mb-6">Get in Touch</h2>
+      <form class="space-y-4 max-w-lg">
+        <input type="text" placeholder="Full Name" class="w-full p-3 border rounded">
+        <input type="email" placeholder="Email Address" class="w-full p-3 border rounded">
+        <textarea placeholder="Message" rows="4" class="w-full p-3 border rounded"></textarea>
+        <button type="submit" class="bg-gray-800 text-white py-3 px-6 rounded hover:bg-gray-700 transition">Send Message</button>
+      </form>
+    </section>
 
-      <button class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700">
-        Request Viewing
-      </button>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white mt-20 py-12">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-xl font-bold mb-4">SHAH<span class="text-blue-400">REALTOR</span></h3>
+        <p class="text-gray-400">Your trusted partner in Mississauga real estate.</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+          <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+          <li><a href="listings.html" class="text-gray-400 hover:text-white">Listings</a></li>
+          <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Legal</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Contact Info</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><i class="fas fa-phone-alt mr-2"></i> (905) 555-1234</li>
+          <li><i class="fas fa-envelope mr-2"></i> hussainshahtq@gmail.com</li>
+          <li><i class="fas fa-map-marker-alt mr-2"></i> 480 Eglinton Ave W #30, Mississauga, ON L5R 0G2</li>
+        </ul>
+      </div>
     </div>
-  </div>
-
-  <!-- DESCRIPTION -->
-  <section class="mt-12">
-    <h2 class="text-2xl font-semibold mb-4">Description</h2>
-    <p class="text-gray-700 leading-relaxed">
-      Beautiful detached home in Ajax with spacious living areas, modern kitchen, finished basement, and close proximity to schools and parks.
-    </p>
-  </section>
-
-  <!-- CONTACT FORM -->
-  <section class="mt-12 mb-24">
-    <h2 class="text-2xl font-semibold mb-4">Get in Touch</h2>
-    <form class="space-y-4 max-w-lg">
-      <input type="text" placeholder="Full Name" class="w-full p-3 border rounded">
-      <input type="email" placeholder="Email Address" class="w-full p-3 border rounded">
-      <textarea placeholder="Message" rows="4" class="w-full p-3 border rounded"></textarea>
-      <button type="submit" class="bg-gray-800 text-white py-3 px-6 rounded">Send Message</button>
-    </form>
-  </section>
-</main>
-
-<!-- Modal Lightbox -->
-<div id="modal" class="modal fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 items-center justify-center z-50">
-  <img id="modalImage" class="max-w-3xl w-full rounded-lg">
-</div>
-
-<footer class="bg-gray-900 text-white py-12">
-  <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-    <div>
-      <h3 class="text-xl font-bold mb-4">SHAH<span class="text-blue-400">REALTOR</span></h3>
-      <p class="text-gray-400">Your trusted partner in Mississauga real estate.</p>
+    <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+      <p>&copy; 2025 Shah Realtor. All rights reserved.</p>
     </div>
-    <div>
-      <h4 class="font-bold mb-4">Quick Links</h4>
-      <ul class="space-y-2">
-        <li><a href="../index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
-        <li><a href="../about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
-        <li><a href="../listings.html" class="text-gray-400 hover:text-white transition">Listings</a></li>
-        <li><a href="../contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-bold mb-4">Legal</h4>
-      <ul class="space-y-2">
-        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
-        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-bold mb-4">Contact Info</h4>
-      <ul class="space-y-2 text-gray-400">
-        <li><i class="fas fa-phone-alt mr-2"></i> (905) 555-1234</li>
-        <li><i class="fas fa-envelope mr-2"></i> hussainshahtq@gmail.com</li>
-        <li><i class="fas fa-map-marker-alt mr-2"></i> 480 Eglinton Ave W #30, Mississauga, ON L5R 0G2</li>
-      </ul>
-    </div>
-  </div>
-  <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-    <p>&copy; 2025 Shah Realtor. All rights reserved.</p>
-  </div>
-</footer>
+  </footer>
 
-<script>
-  window.addEventListener('scroll', function () {
-    const header = document.getElementById('mainHeader');
-    if (window.scrollY > 50) {
-      header.classList.remove('transparent-header');
-      header.classList.add('opaque-header');
-    } else {
-      header.classList.remove('opaque-header');
-      header.classList.add('transparent-header');
-    }
-  });
-
-  function changeImage(src) {
-    document.getElementById('mainImage').src = src;
-  }
-
-  function openModal(src) {
-    const modal = document.getElementById('modal');
-    const modalImage = document.getElementById('modalImage');
-    modal.classList.add('active');
-    modalImage.src = src;
-  }
-
-  document.getElementById('modal').addEventListener('click', function () {
-    this.classList.remove('active');
-  });
-</script>
+  <script>
+    // Header background change on scroll
+    window.addEventListener('scroll', function () {
+      const header = document.getElementById('mainHeader');
+      if (window.scrollY > 50) {
+        header.classList.remove('transparent-header');
+        header.classList.add('opaque-header');
+      } else {
+        header.classList.remove('opaque-header');
+        header.classList.add('transparent-header');
+      }
+    });
+  </script>
 
 </body>
 </html>
