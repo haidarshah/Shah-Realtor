@@ -35,7 +35,7 @@
   <!-- HEADER -->
   <header id="mainHeader" class="fixed w-full z-50 transparent-header py-4">
     <div class="container mx-auto px-6 flex justify-between items-center">
-      <div class="text-2xl font-bold">SHAH<span class="text-blue-600">REALTOR</span></div>
+          <a href="index.html" class="text-2xl font-bold">SHAH<span class="text-blue-600">REALTOR</span></a>
       <nav>
         <ul class="flex space-x-8">
           <li><a href="/index.html" class="hover:text-blue-600 transition">Home</a></li>
@@ -103,20 +103,52 @@
       </p>
     </section>
 
- <!-- Contact Form Section at Bottom -->
+<!-- Contact Form Section at Bottom -->
 <section class="mt-20 bg-gray-100 py-12">
   <div class="container mx-auto px-6 text-center">
     <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
     <p class="text-lg mb-8">Have questions or want to book a viewing? Fill out the form below, and we'll get back to you as soon as possible.</p>
     
-    <form class="space-y-6 max-w-lg mx-auto">
-      <input type="text" placeholder="Full Name" class="w-full p-3 border rounded-lg">
-      <input type="email" placeholder="Email Address" class="w-full p-3 border rounded-lg">
-      <textarea placeholder="Message" rows="4" class="w-full p-3 border rounded-lg"></textarea>
-      <button type="submit" class="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition">Send Message</button>
+    <form
+      name="contact-bottom"
+      method="POST"
+      data-netlify="true"
+      class="space-y-6 max-w-lg mx-auto"
+    >
+      <!-- Hidden input to specify the form name -->
+      <input type="hidden" name="form-name" value="contact-bottom" />
+
+      <input
+        type="text"
+        name="full-name"
+        placeholder="Full Name"
+        class="w-full p-3 border rounded-lg"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        class="w-full p-3 border rounded-lg"
+        required
+      />
+      <textarea
+        name="message"
+        placeholder="Message"
+        rows="4"
+        class="w-full p-3 border rounded-lg"
+        required
+      ></textarea>
+      <button
+        type="submit"
+        class="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition"
+      >
+        Send Message
+      </button>
     </form>
   </div>
 </section>
+
 
 
   </main>
