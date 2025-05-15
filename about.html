@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us | Shah Realtor</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,103 +12,84 @@
     .opaque-header { background-color: rgba(255, 255, 255, 0.95); }
   </style>
 </head>
-
 <body class="font-['Montserrat'] text-gray-800 bg-gray-50">
 
-  <!-- Header (Same as Home) -->
+  <!-- Header -->
   <header id="mainHeader" class="fixed w-full z-50 transparent-header py-4">
     <div class="container mx-auto px-6 flex justify-between items-center">
-       <a href="/index.html" class="text-2xl font-bold">SHAH<span class="text-blue-600">REALTOR</span></a>
+      <a href="/index.html" class="text-2xl font-bold">SHAH<span class="text-blue-600">REALTOR</span></a>
       <nav>
         <ul class="flex space-x-8">
           <li><a href="/index.html" class="hover:text-blue-600 transition">Home</a></li>
-          <li><a href="/about.html" class="hover:text-blue-600 transition">About Us</a></li>
-          <li><a href="/listings.html" class="text-blue-600 font-semibold">Listings</a></li>
+          <li><a href="/about.html" class="text-blue-600 font-semibold">About Us</a></li>
+          <li><a href="/listings.html" class="hover:text-blue-600 transition">Listings</a></li>
           <li><a href="/contact.html" class="hover:text-blue-600 transition">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Main -->
   <main class="pt-32 container mx-auto px-6">
-    <section class="text-center">
+    <!-- Intro -->
+    <section class="text-center mb-20">
       <h1 class="text-4xl font-bold mb-6">About Shah Realtor</h1>
-      <p class="text-lg text-gray-600 mb-10 max-w-3xl mx-auto">
-        With deep roots in the Greater Toronto Area, Shah Realtor is committed to helping families find homes where they can thrive. 
-        Whether buying, selling, or investing, we deliver personalized, top-tier service with honesty, dedication, and market expertise.
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Shah Realtor is a family-run real estate brand rooted in the Greater Toronto Area. We combine decades of local market knowledge with modern strategy to help buyers and sellers achieve their goals with clarity and confidence.
       </p>
     </section>
 
-    <section class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-12">
-      <div>
-        <h2 class="text-3xl font-semibold mb-4">Why Choose Us?</h2>
-        <p class="text-gray-600 mb-4">
-          We understand that real estate is more than just transactions — it's about life decisions. That's why we treat each client like family, 
-          ensuring you feel confident at every step of the process.
+    <!-- Meet the Realtors -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+      <!-- Realtor 1 -->
+      <div class="text-center">
+        <img src="assets/images/tariqshah-about.jpg" alt="Tariq Shah" class="w-48 h-48 rounded-full object-cover mx-auto mb-4 shadow-lg">
+        <h3 class="text-2xl font-bold">Tariq Shah</h3>
+        <p class="text-blue-600 font-medium">Broker | 15+ Years of Experience</p>
+        <p class="mt-4 text-gray-700 leading-relaxed max-w-md mx-auto">
+          With over 15 years of real estate experience in Ontario, Tariq brings a deep understanding of local markets, contract negotiation, and strategic pricing. He's known for his calm professionalism and thorough approach, and has guided hundreds of clients through successful home purchases and sales.
         </p>
-        <ul class="list-disc ml-6 text-gray-600 space-y-2">
-          <li>Local Market Expertise</li>
-          <li>Responsive, Personalized Service</li>
-          <li>Proven Negotiation Skills</li>
-          <li>Trusted Network of Professionals</li>
-        </ul>
       </div>
 
-      <div>
-        <img src="assets/images/about-why.jpg" alt="Why Choose Us" class="w-full h-80 object-cover rounded-2xl shadow">
+      <!-- Realtor 2 -->
+      <div class="text-center">
+        <img src="assets/images/hussainshah-about.png" alt="Hussain Shah" class="w-48 h-48 rounded-full object-cover mx-auto mb-4 shadow-lg">
+        <h3 class="text-2xl font-bold">Hussain Shah</h3>
+        <p class="text-blue-600 font-medium">Real Estate Salesperson</p>
+        <p class="mt-4 text-gray-700 leading-relaxed max-w-md mx-auto">
+          Hussain brings fresh perspective, energy, and digital savvy to the team. With a passion for architecture and marketing, he’s focused on helping modern buyers and first-time homeowners find their perfect space — and on showcasing listings through creative, targeted outreach.
+        </p>
       </div>
     </section>
-<!-- Contact Form Section at Bottom -->
-<section class="mt-20 bg-gray-100 py-12">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
-    <p class="text-lg mb-8">Have questions or want to book a viewing? Fill out the form below, and we'll get back to you as soon as possible.</p>
-    
-    <form
-      name="contact-bottom"
-      method="POST"
-      data-netlify="true"
-      class="space-y-6 max-w-lg mx-auto"
-    >
-      <!-- Hidden input to specify the form name -->
-      <input type="hidden" name="form-name" value="contact-bottom" />
 
-      <input
-        type="text"
-        name="full-name"
-        placeholder="Full Name"
-        class="w-full p-3 border rounded-lg"
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Email Address"
-        class="w-full p-3 border rounded-lg"
-        required
-      />
-      <textarea
-        name="message"
-        placeholder="Message"
-        rows="4"
-        class="w-full p-3 border rounded-lg"
-        required
-      ></textarea>
-      <button
-        type="submit"
-        class="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition"
-      >
-        Send Message
-      </button>
-    </form>
-  </div>
-</section>
+    <!-- Values -->
+    <section class="mb-20 text-center max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6">Our Values</h2>
+      <ul class="list-disc list-inside text-left text-gray-700 space-y-2">
+        <li>Honesty and transparency in every transaction</li>
+        <li>Client-first service and responsiveness</li>
+        <li>Smart, strategic real estate advice</li>
+        <li>Ongoing relationships — before, during, and after closing</li>
+      </ul>
+    </section>
 
+    <!-- Contact Form -->
+    <section class="mt-20 bg-gray-100 py-12">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+        <p class="text-lg mb-8">Have questions or want to book a viewing? Fill out the form below, and we'll get back to you as soon as possible.</p>
 
+        <form name="contact-bottom" method="POST" data-netlify="true" class="space-y-6 max-w-lg mx-auto">
+          <input type="hidden" name="form-name" value="contact-bottom" />
+          <input type="text" name="full-name" placeholder="Full Name" class="w-full p-3 border rounded-lg" required />
+          <input type="email" name="email" placeholder="Email Address" class="w-full p-3 border rounded-lg" required />
+          <textarea name="message" placeholder="Message" rows="4" class="w-full p-3 border rounded-lg" required></textarea>
+          <button type="submit" class="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition">Send Message</button>
+        </form>
+      </div>
+    </section>
   </main>
 
-    <!-- FOOTER -->
+  <!-- Footer -->
   <footer class="bg-gray-900 text-white mt-20 py-12">
     <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
       <div>
@@ -127,10 +108,9 @@
       <div>
         <h4 class="font-bold mb-4">Legal</h4>
         <ul class="space-y-2">
-          <li><a href="privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+          <li><a href="privacy.html" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
         </ul>
       </div>
-      <div>
       <div>
         <h4 class="font-bold mb-4">Contact Info</h4>
         <ul class="space-y-2 text-gray-400">
